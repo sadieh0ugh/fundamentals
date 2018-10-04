@@ -1,5 +1,5 @@
-
 import math
+
 """ PSEUDOCODE: a planning language that can be interpreted into different languages and understood by regular users
                 In Exam: assigning a variable is shown as an arrow not '=' """
 
@@ -28,7 +28,7 @@ print(ans)
 # TRUNCATING = cutting off a number or string e.g
 trun = 9/4
 trun = math.trunc(1)
-print(trun)  ### need to fix this
+print(trun)  # need to fix this
 
 # DIV // = outputs the whole number from division
 # 5 DIV 2 = 2
@@ -53,7 +53,7 @@ print(chr(num))  # prints ASCII value for variable value
 
 greeting = 'hello'
 name = 'sadie'
-concatenated = greeting + name # '+' does not add a space in between the two words
+concatenated = greeting + name  # '+' does not add a space in between the two words
 print(concatenated)
 
 # DIFFERENCE BETWEEN A VARIABLE AND A CONSTANT:
@@ -107,9 +107,9 @@ while number <= 10:
     print(number)
     number = number + 1
 
-#FOR
+# FOR
 
-Nstr=""
+Nstr = ""
 for i in 'hello':
     i= (ord(i)+1)
     Nstr= Nstr + chr(i) # makes shifted letters all into one string
@@ -147,9 +147,9 @@ print(onedarray)
 # creates array of 10 0s using while loop
 array = []
 arraycount = 0
+array.append('0')
 while arraycount <= 9:
     arraycount = arraycount + 1
-    array.append('0')
     print(array)
 
 # creates 10 lists of 0s using two for loops
@@ -171,18 +171,75 @@ for i in array:
     print(line)
 
 
-# creates array of 10 alternating 0s and 1s
+# creates array of 10 alternating 0s and 1s using MODULUS
 # ; allows you to append two items
+# array = []
+size = 10
+for i in range(size):
+    if i % 2 == 0:
+        line1 = []
+        for i in range(size):
+            num1 = i % 2
+            line1.append(num1)
+        array.append(line1)
+    elif i % 2 == 1:
+        line2 = []
+        for i in range(1,(size+1)):
+            num2 = i % 2
+            line2.append(num2)
+        array.append(line2)
 
-for x in range(0,5):
-    array.append(0);array.append(1)
-print(array)
+for i in array:
+    line = ""
+    for x in i:
+        line = line + str(x) + " "
+    print(line)
 
+# SUB-ROUTINES = overall term for procedure and function
+# piece of reusable code that can be called under a
+# FUNCTION returns a value, both can output so always say RETURN
+# example of a function is len() because it returns a value
 
+# language defined = what is already built into the language e.g python
 
+# PARAMETERS
 
+# LOCAL AND GLOBAL - scope
 
+# MODULAR PROGRAMMING = breaking down a code into subroutines
 
+''' FILE HANDLING
+ record - row of a database
+ field - individual piece of data 
+  
+ text file data base 
+ 'bob',12,'LG3'
+ 'sarah',13,'LG2'
+  CSF = Comma Separated File
+  
+  FILE HANDLING COMMANDS:
+  file = open('filename.txt', mode) modes = a, r, w 
+  
+  print(file.readlines()) reads all lines 
+  
+  lines = ["array", "of", "lines"]
+  file.writelines(lines)
+  
+  after writing / appending to a file must use file.close()
+  
+EXCEPTION HANDLING: two commands are: try, except 
+- set exception as e 
+ 
+'''
 
+# EXCEPTION HANDLING EXAMPLE
 
-
+choice = input("Press 1 to login\n\
+Press 2 to signup\n\
+Press 3 to close\n")
+while choice <'1' or choice > '3':
+    try:
+        number = int(input)
+    except:
+        print("must be an integer between 1 and 3")
+    break
