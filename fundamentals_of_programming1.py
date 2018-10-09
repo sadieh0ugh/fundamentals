@@ -10,7 +10,7 @@ import math
 string = str('apple123@#')
 whole_number = int(4)
 decimal = float(5.1)  # also called a real
-# character = char("H") #single character, commonly an ASCII value
+character = char("H") #single character, commonly an ASCII value
 boolean = bool(True)
 
 # SETTING DATA TYPES:
@@ -19,16 +19,21 @@ boolean = bool(True)
 
 # ARITHMETIC
 # + , - , /, *, **  add, minus, divide, times, power
-#
+add = 4 + 5 
+minus = 4 - 5 
+divide = 8 / 2 
+times = 4 * 5
+exponential = 4 ** 3 # same as 4^3
+sqaure = math.sqrt(9)
+
 # ROUNDING:
 ans = 9 / 4
-round(ans,2)  # use round function that has two parameters (variable, decimal place)
-print(ans)
+print(round(ans,1))  # use round function that has two parameters (variable, decimal place)
+
 #
 # TRUNCATING = cutting off a number or string e.g
 trun = 9/4
-trun = math.trunc(1)
-print(trun)  # need to fix this
+print(math.trunc(trun))
 
 # DIV // = outputs the whole number from division
 # 5 DIV 2 = 2
@@ -69,8 +74,21 @@ print(correct)
 
 # IF STATEMENTS: show next line will run after if using :, then, indentation
 
-x = 'string'
+def percentage(score):
+    score = score * 10
+    print("You scored",score,"%")
 
+score = int(input("Enter your score out of 10: "))
+
+if score <= 3:
+    percentage(score)
+    print("Fail, try again")
+elif score == 5:
+    percentage(score)
+    print("Average")
+else:
+    percentage(score)
+    print("Good score")
 
 # ELSE / CATCH ALL STATEMENTS: catches any incorrect inputs
 
