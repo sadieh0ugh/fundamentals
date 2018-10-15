@@ -93,22 +93,27 @@ else:
 # ELSE / CATCH ALL STATEMENTS: catches any incorrect inputs
 
 # NESTING: statements inside other statements, using indentations
-"""
-log = input("username: ")
-score = 7
-if log == 'sadie':
-    if score < 10:
-        score = score -1
-    else:
-elif log == 'tom':
-    if score > 10:
-        score = score + 1
-    else:
-        break
 
+def scoreCalc(score):
+  if score < 10:
+        score = score -1
+        print(score)
+    elif score = 10:
+        print(score)
+    else:
+        score = score + 1 
+        print(score)
+  
+
+log = input("username: ")
+score = int(input("score: "))
+if log == 'sadie':
+  scoreCalc(score)
+elif log == 'tom':
+  scoreCalc(score)
 else:
-    print('invalid')
-"""
+    print('invalid user')
+
 
 # ALTERNATIVE SELECTION: Case Statements (in theory exam can write if statements
 # Performs different statements
@@ -153,7 +158,7 @@ print(onedarray[0])
 # items referenced with two indexes [][]
 # starts with the largest array then descends
 
-twodarray = [['sadie',16,'purple',2001],['ruben',15,2002],['kes',17]]
+twodarray = [['sadie',16,'purple',2001],['ruben',16,2002],['kes',17]]
 print (twodarray[0][2]) # returns purple
 
 # ARRAY COMMANDS .append .insert .pop
@@ -220,7 +225,7 @@ for i in array:
 
 # language defined = what is already built into the language e.g python
 
-# PARAMETERS
+# PARAMETERS; pass variables to and from subroutines giving them a new scope 
 
 # LOCAL AND GLOBAL - scope
 
